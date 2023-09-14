@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root[data-theme="light"]{
+    --white-bg: #fff;
+    --body-bg: hsl(30, 38%, 92%);
+    --title-color: #000;
+    --gray-text: hsl(228, 12%, 48%);
+    --cost-color: hsl(158, 36%, 37%);
+    --dark-green: #1A4031FF;
+}
+
+:root[data-theme="dark"]{
+    --body-bg:#050521FF;
+    --white-bg:#0c0c4f;
+    --title-color:white;
+    --gray-text: hsl(228, 12%, 48%);
+    --cost-color: hsl(158, 36%, 37%);
+    --dark-green: #1A4031FF;
+}
+
+body {
+    background-color: var(--body-bg);
+}
+
+.container {
+    width: 750px;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.left{
+    width: 50%;
+    height: 525.4px;
+    background-image: url(./images/image-product-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.right {
+    width: 50%;
+    height: 100%;
+    padding: 32px;
+    background-color: var(--white-bg);
+}
+
+h2 {
+    letter-spacing: 7px;
+    font-size: 16px;
+    color: var(--gray-text);
+    margin-bottom: 35px;
+}
+
+.title {
+    font-family: 'Fraunces', serif;
+    font-size: 43px;
+    line-height: 100%;
+    margin-bottom: 35px;
+    color: var(--title-color);
+}
+
+p {
+    font-size: 16px;
+    color: var(--gray-text);
+    margin-bottom: 35px;
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.cost {
+    display: inline-block;
+    font-family: 'Fraunces', serif;
+    font-size: 43px;
+    color: var(--cost-color);
+}
+
+span {
+    font-size: 16px;
+    color: var(--gray-text);
+    display: inline-block;
+    margin-left: 40px;
+    text-decoration: line-through;
+}
+
+.add-to-card {
+    cursor: pointer;
+    border: 0;
+    width: 100%;
+    border-radius: 0.5rem;
+    padding: 1.05rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cost-color);
+    font-size: medium;
+    color: white;
+    font-weight: 700;
+    transition: .5s;
+}
+
+.add-to-card:hover{
+    background-color: var(--dark-green);
+}
+
+svg {
+    margin-right: 10px;
+}
+
+.theme-toggle-button {
+    position: absolute;
+    z-index: 1;
+    right: 12px;
+    top: 12px;
+    padding: 4px 12px;
+    border: 1px solid var(--title-color);
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: normal;
+    background-color: transparent;
+    color: var(--title-color);
+    cursor: pointer;
+}
+
+.theme-toggle-button:hover{
+    background-color: var(--title-color);
+    color:var(--body-bg);
+}
